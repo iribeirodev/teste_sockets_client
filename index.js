@@ -1,3 +1,5 @@
+var app = require('express')();
+var http = require('http').Server(app);
 var io = require('socket.io-client');
 require('dotenv').config()
 
@@ -10,3 +12,7 @@ socket.on('connect', function(socket){
 });
 
 socket.emit('CH01', 'TM_Data_Importer', 'hello');
+
+http.listen(port, function () {
+	console.log(`listening on *:${port}`);
+});
