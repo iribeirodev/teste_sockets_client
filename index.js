@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const port = process.env.PORT;
 
-var socket = io.connect('http://localhost:' + port, {reconnection: true});
+var socket = io.connect('http://localhost:39549' , {reconnection: true});
 
 socket.on('connect', function(socket){
 	console.log('client connected');
