@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const port = process.env.PORT;
 
-var socket = io.connect('https://teste-sockets-client.herokuapp.com' , {reconnection: true});
+var socket = io.connect('https://teste-sockets-client.herokuapp.com:11700' , {reconnection: true});
 
 socket.on('connect', function(socket){
 	console.log('client connected');
